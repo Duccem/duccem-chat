@@ -1,4 +1,7 @@
-import { RunnablePassthrough, RunnableSequence } from 'langchain/schema/runnable';
+import {
+  RunnablePassthrough,
+  RunnableSequence,
+} from 'langchain/schema/runnable';
 import { HuggingFaceInference } from 'langchain/llms/hf';
 export class Lang {
   private chain!: RunnableSequence;
@@ -9,5 +12,9 @@ export class Lang {
       apiKey: process.env.HUGGINGFACE_API_KEY,
       model: 'OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5',
     });
+  }
+
+  async makeConnection() {
+    return '';
   }
 }
